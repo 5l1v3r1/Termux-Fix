@@ -7,7 +7,6 @@ lightgreen='\e[1;32m'
 white='\e[1;37m'
 red='\e[1;31m'
 yellow='\e[1;33m'
-bin='$PREFIX/bin/termux-elf-cleaner'
 echo -e $okegreen" [ * ] Updating Termux ..."
 pkg update
 echo -e $cyan" [ * ] Done !!"
@@ -26,8 +25,8 @@ echo -e $cyan" [ * ] Done !!"
 echo -e $okegreen" [ * ] Building Script ..."
 make
 echo -e $cyan" [ * ] Done !!"
-echo -e $okegreen" [ * ] Copying Script to $bin ..."
-cp termux-elf-cleaner $bin
+echo -e $okegreen" [ * ] Copying Script to $PREFIX/bin/ ..."
+cp termux-elf-cleaner $PREFIX/bin/
 echo -e $cyan" [ * ] Done !!"
 echo -e $okegreen" [ * ] Fixing Termux Linker ..."
 termux-elf-cleaner /data/data/com.termux/files/usr/lib/libcrypto.so
